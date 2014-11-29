@@ -38,8 +38,10 @@ class BidiRenderer {
         if( isset( $GLOBALS['BE_USER'] ) && 
             $this->isRightToLeft( $GLOBALS['BE_USER']->user['lang'] ) ) {
 
+            $extRelPath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath( 'typo3rtl' );
+
             $hookParameters['pageRenderer']->addCssFile(
-                    '../typo3conf/ext/typo3rtl/Resources/Public/Css/rtl.css'
+                    $extRelPath . 'Resources/Public/Css/rtl.css'
             );
         }
     }
