@@ -2,8 +2,9 @@
 namespace OLSSOFT\Typo3rtl\Hooks;
 
 /*
- *
- *  (c) 2014 Oleg Sverdlov <oleg@ols.co.il>
+ *  Support RTL languages for Typo3 backend.
+ *  
+ *  Created by Oleg Sverdlov <oleg@ols.co.il>
  *
  *  This script is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
  *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
@@ -30,19 +31,18 @@ class BidiRenderer {
     }
     
     /**
-     * @param $hookParameters
-     * @param $documentTemplateInstance
+     * @param array $hookParameters
+     * @param \TYPO3\CMS\Backend\Template\DocumentTemplate $documentTemplate
      */
-    public function preHeaderRenderHook($hookParameters, $documentTemplateInstance) {
+    public function preHeaderRenderHook( &$hookParameters, &$documentTemplateInstance) {
 
         if( isset( $GLOBALS['BE_USER'] ) && 
             $this->isRightToLeft( $GLOBALS['BE_USER']->user['lang'] ) ) {
 
-            $extRelPath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath( 'typo3rtl' );
+            //$extRelPath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath( 'typo3rtl' );
+            $extRelPath = '/typo3conf/ext/typo3rtl/';
 
-            $hookParameters['pageRenderer']->addCssFile(
-                    $extRelPath . 'Resources/Public/Css/rtl.css'
-            );
+            $hookParameters['pageRenderer']->addCssFile( $extRelPath . 'Resources/Public/Css/rtl.css' );
         }
     }
 

@@ -1,4 +1,7 @@
+body { direction:rtl; }
 #typo3-pagetree-tree { direction:rtl; }
+#ext-cms-layout-db-layout-php { direction:rtl; }
+#typo3-alt-doc-php { direction:rtl; }
 
 .x-tree-lines .x-tree-elbow{
     background-image: url('../Icons/join.gif');
@@ -34,4 +37,11 @@
 
 span.t3-icon {
 	margin-right:0; margin-left:2px;
+}
+
+/* page */
+#typo3-menu li span.submodule-icon {
+  float: right;
+  width: 20px;
+  margin-left: 6px;
 }
