@@ -27,14 +27,14 @@ class BidiRenderer {
      * @todo static_language_ext if possible
      */
     protected function isRightToLeft( $l ) {
-        return ( $l==='he' || $l==='ar' || $l==='fa' );
+        return ( $l==='he' || $l==='ar' || $l==='fa' || $l==='ur' );
     }
     
     /**
      * @param array $hookParameters
      * @param \TYPO3\CMS\Backend\Template\DocumentTemplate $documentTemplate
      */
-    public function preHeaderRenderHook( &$hookParameters, &$documentTemplateInstance) {
+    public function preHeaderRenderHook( $hookParameters, $documentTemplateInstance) {
 
         if( isset( $GLOBALS['BE_USER'] ) && 
             $this->isRightToLeft( $GLOBALS['BE_USER']->user['lang'] ) ) {
