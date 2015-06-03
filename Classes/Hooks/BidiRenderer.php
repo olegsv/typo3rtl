@@ -34,13 +34,12 @@ class BidiRenderer {
      * @param array $hookParameters
      * @param \TYPO3\CMS\Backend\Template\DocumentTemplate $documentTemplate
      */
-    public function preHeaderRenderHook( $hookParameters, $documentTemplateInstance) {
+    public function preHeaderRenderHook( &$hookParameters, &$documentTemplateInstance) {
 
         if( isset( $GLOBALS['BE_USER'] ) && 
             $this->isRightToLeft( $GLOBALS['BE_USER']->user['lang'] ) ) {
 
-            //$extRelPath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath( 'typo3rtl' );
-            $extRelPath = '/typo3conf/ext/typo3rtl/';
+            $extRelPath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath( 'typo3rtl' );
 
             $hookParameters['pageRenderer']->addCssFile( $extRelPath . 'Resources/Public/Css/rtl.css' );
         }
