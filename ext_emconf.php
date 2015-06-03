@@ -9,8 +9,8 @@
  ***************************************************************/
 
 $EM_CONF[$_EXTKEY] = array(
-	'title' => 'typo3rtl',
-	'description' => 'Right-to-left backend for typo3.',
+	'title' => 'RTL backend',
+	'description' => 'Right-to-left backend modifications.',
 	'category' => 'be',
 	'author' => 'Oleg Sverdlov',
 	'author_email' => 'oleg@ols.co.il',
@@ -19,7 +19,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'uploadfolder' => '0',
 	'createDirs' => '',
 	'clearCacheOnLoad' => true,
-	'version' => '0.1',
+	'version' => '0.0.2',
 	'constraints' => array(
 		'depends' => array(
 			'typo3' => '6.2',

@@ -6,6 +6,8 @@ This simple extension aims to provide support for right-to-left (RTL) languages 
 __Author: Oleg Sverdlov__
 
 
+Github: https://github.com/olegsv/typo3rtl
+
 ### Notes ###
 
 The extension only renders pages tree , left menu and work area.
