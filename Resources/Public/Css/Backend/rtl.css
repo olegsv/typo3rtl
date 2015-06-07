@@ -1,0 +1,60 @@
+body { direction:rtl; }
+#typo3-pagetree-tree { direction:rtl; }
+#ext-cms-layout-db-layout-php { direction:rtl; }
+#typo3-alt-doc-php { direction:rtl; }
+
+.x-tree-lines .x-tree-elbow{
+    background-image: url('../../Icons/join.gif');
+}
+.x-tree-lines .x-tree-elbow-end {
+    background: url('../../Icons/joinbottom.gif') left top no-repeat;
+}
+
+.x-tree-lines .x-tree-elbow-minus {
+    background-image: url('../../Icons/minus.gif');
+}
+.x-tree-lines .x-tree-elbow-end-minus {
+    background: url('../../Icons/minusbottom.gif') right top no-repeat;
+}
+
+.x-tree-lines .x-tree-elbow-end-plus {
+    background: url('../../Icons/plusbottom.gif') right top no-repeat;
+}
+
+.x-tree-lines .x-tree-elbow-plus {
+    background-image: url('../../Icons/plus.gif');
+}
+
+.x-tree-lines .x-tree-elbow-line{
+    background-image: url('../../Icons/line.gif');
+}
+
+.x-tree ul {
+	padding-left: auto;
+	padding-right: 0;
+}
+
+
+span.t3-icon {
+	margin-right:0; margin-left:2px;
+}
+
+/* page */
+
+#typo3-menu, #typo3-menu ul {
+    padding-left: 0;
+    padding-right:9px;
+}
+
+#typo3-menu li span.submodule-icon {
+  float: right;
+  width: 20px;
+  margin-left: 6px;
+}
+#typo3-menu li div.modgroup {
+    padding-right:24px;
+    padding-left: 0;
+}
+#typo3-menu li div.expanded, #typo3-menu li div.collapsed {
+    background-position: right 50%;
+}
