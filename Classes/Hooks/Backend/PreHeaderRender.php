@@ -64,10 +64,8 @@ class PreHeaderRender {
      */
     public function addStyles(&$params, &$documentTemplate){
         
-        error_log('aaa');
         if( isset( $GLOBALS['BE_USER'] ) && 
             $this->isRightToLeft( $GLOBALS['BE_USER']->user['lang'] ) ) {
-            error_log('bbbb');
             $backendCssFile = ExtensionManagementUtility::extRelPath('typo3rtl') . 'Resources/Public/Css/Backend/rtl.css';
             $params['pageRenderer']->addCssFile($backendCssFile);
         }
