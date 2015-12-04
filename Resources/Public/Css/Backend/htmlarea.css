@@ -1,4 +1,6 @@
-/* Selectors for the htmlArea RTE editor */
+/* - - - - - - - - - - - - - - - - - - - - -
+RTL override for htmlArea RTE editor
+- - - - - - - - - - - - - - - - - - - - - */
 .htmlarea {
  	margin: 0 0 0 2px;
 }
