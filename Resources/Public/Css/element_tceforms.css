@@ -1,0 +1,242 @@
+/* - - - - - - - - - - - - - - - - - - - - -
+RTL override for TCEforms
+File: elements/element_tceforms.css
+- - - - - - - - - - - - - - - - - - - - - */
+
+img.t3-TCEforms-reqImg {
+	left: inherit;
+	right:14px;
+	margin-left: 2px;
+	margin-right: inherit;
+}
+
+img.t3-TCEforms-reqTabImg {
+	margin-left: 0px;
+	margin-right: 4px;
+}
+
+img.t3-TCEforms-contentchangedImg {
+	left: 4px;
+	right: 4px;
+}
+
+.t3-form-palette-icon-required {
+	right: 4px;
+	margin-left: 2px;
+}
+/* renamed to .t3-form-palette-icon-required, lines below kept for backwards-compatibility */
+img.t3-TCEforms-reqPaletteImg {
+	margin-left: 2px;
+}
+
+.t3-form-palette-icon-contentchanged {
+	right: -6px;
+    left:inherit;
+}
+/* renamed to .t3-form-palette-icon-contentchanged, lines below kept for backwards-compatibility */
+img.t3-TCEforms-contentchangedPaletteImg {
+	left: 0;
+	right: 4px;
+}
+
+table.wrapperTable tr.class-main2 td.palette-header,
+table.wrapperTable1 .class-main12 td.palette-header {
+	padding-left: 0px;
+	padding-right: 10px;
+}
+
+
+
+.typo3-TCEforms select.icon-select option {
+	padding-left: inherit;
+	padding-right: 22px;
+}
+
+
+.typo3-TCEforms table.typo3-TCEforms-select-checkbox tr td.c-labelCell img {
+	margin-right: inherit;
+	margin-left: 5px;
+}
+
+
+.typo3-TCEforms table.typo3-TCEforms-select-checkbox td.c-descr img {
+	float: left;
+}
+
+
+.checkbox, .checkbox:hover {
+	margin: 4px 0px 4px 2px;
+}
+
+
+
+.typo3-TCEforms div.imagethumbs .nobr {
+	margin-left: 3px;
+}
+
+
+.typo3-TCEforms-palette select.select,
+.t3-form-palette-field-container select.select {
+	margin: 4px 1px 4px 2px;
+}
+
+.t3-form-palette-field-container {
+	padding-right: inherit;
+	padding-left: 25px;
+}
+
+
+.typo3-TCEforms .typo3-csh-link {
+	margin-left: 0px;
+	margin-right: 5px;
+}
+
+.t3-tceforms-fieldReadOnly {
+	/** Lock icon in right corner */
+	padding: 3px 6px 3px 30px;
+	margin: 0 0 0.5em 0.5em;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - -
+TCEforms suggest
+- - - - - - - - - - - - - - - - - - - - - */
+div.typo3-TCEforms-suggest-position-right {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+div.typo3-TCEforms-suggest label {
+	margin-right: inherit;
+	margin-left: 5px;
+}
+
+div.typo3-TCEforms-suggest-indicator {
+	left: inherit;
+	right: 230px;
+}
+
+
+div.typo3-TCEforms-suggest-choices li {
+	padding: 4px 24px 4px 2px;
+}
+
+
+div.typo3-TCEforms-suggest-choices span.suggest-uid {
+	margin-right: 0.3em;
+}
+
+
+
+
+input.typo3-TCEforms-suggest-search {
+	padding-left: 0px;
+	padding-right: 20px;
+}
+
+
+/* - - - - - - - - - - - - - - - - - - - - -
+TCEforms Flexforms
+- - - - - - - - - - - - - - - - - - - - - */
+/** tabs inside the table => flexforms */
+.typo3-TCEforms .wrapperTable .typo3-dyntabmenu-divs,
+.typo3-TCEforms .wrapperTable1 .typo3-dyntabmenu-divs,
+.typo3-TCEforms .wrapperTable2 .typo3-dyntabmenu-divs,
+.typo3-TCEforms .wrapperTable3 .typo3-dyntabmenu-divs,
+.typo3-TCEforms .wrapperTable4 .typo3-dyntabmenu-divs,
+.typo3-TCEforms .wrapperTable5 .typo3-dyntabmenu-divs {
+	margin-left: 20px;
+	margin-right: inherit;
+	margin-bottom: 10px;
+}
+
+
+.t3-form-field-flex {
+	padding: 0 5px 5px;
+}
+
+
+
+.t3-form-field-header-inline > span {
+	right: 0px;
+	left: 4px;
+}
+
+
+
+.t3-form-field-header-inline-icon,
+.t3-form-field-header-inline-thumbnail {
+	float: right;
+	margin-right: inherit;
+	margin-left: 5px;
+}
+
+
+.t3-form-field-header-inline-thumbnail {
+	float: right;
+	margin-right: inherit;
+	margin-left: 15px;
+}
+
+
+
+
+.t3-form-field-header-inline-ctrl {
+	float: left;
+}
+
+.t3-form-field-header-inline-ctrl .t3-icon {
+	margin: 0px 3px 0px 0;
+}
+
+.t3-form-field-header-inline-summary dt {
+	float: right;
+	clear: right;
+	margin-left: 10px;
+	margin-right: inherit;
+}
+
+
+
+
+.t3-form-field-header-inline-summary dd {
+	float: right;
+}
+
+
+.t3-form-field-header-inline .t3-form-field-header-inline-ctrl > span.sortableHandle {
+	margin-left: inherit;
+	margin-right: 16px;
+}
+
+
+
+.t3-form-field-record-inline .typo3-dyntabmenu-divs,
+.t3-form-field-record-inline .typo3-dyntabmenu-tabs {
+	margin-left:8px;
+	margin-right:8px !important;
+}
+
+
+/* - - - - - - - - - - - - - - - - - - - - -
+TCEforms Sections
+- - - - - - - - - - - - - - - - - - - - - */
+.t3-form-field-container-flexsection {
+	padding-left: inherit;
+	padding-right: 20px;
+}
+
+
+.t3-form-field-toggle-flexsection {
+	padding: 5px 20px 5px 0px;
+}
+
+.t3-form-field-add-flexsection {
+	padding: 10px 20px 5px 5px;
+}
+
+/* preview image in sys_file records */
+img.t3-tceforms-sysfile-imagepreview {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}

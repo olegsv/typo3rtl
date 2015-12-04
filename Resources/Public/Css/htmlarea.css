@@ -1,0 +1,87 @@
+/* Selectors for the htmlArea RTE editor */
+.htmlarea {
+ 	margin: 0 0 0 2px;
+}
+.pleasewait {
+ 	padding: 20px 50px 20px 0px;
+ 	text-align: right;
+}
+.editorWrap div.resizable {
+	padding-left: 7px;
+	padding-right: inherit;
+}
+
+.htmlarea .toolbar .tb-group {
+	float:right;
+	margin:1px 0px 0px 2px;
+}
+.htmlarea .toolbar .x-form-item {
+	float: right;
+	margin: 0 0 0 0.5em;
+}
+.htmlarea .toolbar .button {
+	float: right;
+}
+.htmlarea .toolbar .x-btn-text {
+	margin: 1px 2px 1px 0;
+}
+.htmlarea .toolbar .indicator {
+	float: right;
+}
+.htmlarea .toolbar .separator {
+	float: right;
+}
+.htmlarea .toolbar .space {
+	float:right;
+}
+.htmlarea .toolbar .x-form-item label.x-form-item-label{
+	padding-left: 0;
+}
+.htmlarea .toolbar .x-form-field-wrap .x-form-trigger {
+	left: 0;
+}
+.htmlarea .statusBar .statusBarWordCount {
+	float: left;
+}
+/* IE legend positioning bug */
+.ext-ie .htmlarea-window .x-fieldset legend,
+.ext-ie .htmlarea-window .x-fieldset legend span {
+	float: right;
+}
+.ext-ie .htmlarea-window .x-fieldset-bwrap {
+	clear: right;
+}
+/* Selector htmlarea-window-table is used in the element browsers */
+#typo3-curUrl {
+	margin-right: 10px;
+	margin-left: 0px;
+}
+.htmlarea-window-table select {
+	padding-right: 3px;
+}
+.htmlarea-window .x-form-item-label {
+	text-align: left;
+}
+/* Selectors for the default image dialogue */
+.htmlarea-window .image-preview {
+    float: left;
+}
+.htmlarea-window .emoticon {
+	float: right;
+}
+/* Selectors for the CharacterMap dialogue */
+.htmlarea-window .character-map .character {
+	float: right;
+}
+.htmlarea-window .spell-check .controls .x-btn {
+	margin-right: 8px;
+}
+.htmlarea-window .spell-check .contentframe {
+	float: left;
+}
+.htmlarea-context-menu .button {
+	margin: 0 0px 0 2px;
+}
+.htmlarea-context-menu .hover {
+	margin: 0 0px 0 2px;
+}

@@ -1,0 +1,11 @@
+/* - - - - - - - - - - - - - - - - - - - - -
+-New Record Wizard
+- - - - - - - - - - - - - - - - - - - - - */
+
+.contentelement-wizard-item-input,
+.contentelement-wizard-item-icon {
+	float: right;
+	margin-right: inherit;
+	margin-left: 6px;
+}
+

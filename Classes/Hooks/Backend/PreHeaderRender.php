@@ -59,6 +59,7 @@ class PreHeaderRender {
     }
 
     /**
+     * Add style
      * @param array $params
      * @param \TYPO3\CMS\Backend\Template\DocumentTemplate $documentTemplate
      */
@@ -66,8 +67,11 @@ class PreHeaderRender {
         
         if( isset( $GLOBALS['BE_USER'] ) && 
             $this->isRightToLeft( $GLOBALS['BE_USER']->user['lang'] ) ) {
-            $backendCssFile = ExtensionManagementUtility::extRelPath('typo3rtl') . 'Resources/Public/Css/Backend/rtl.css';
-            $params['pageRenderer']->addCssFile($backendCssFile);
+            $backendCssPath = ExtensionManagementUtility::extRelPath('typo3rtl') . 'Resources/Public/Css/Backend/';
+            $params['pageRenderer']->addCssFile($backendCssPath . 'rtl.css' );
+            $params['pageRenderer']->addCssFile($backendCssPath . 'element_tceforms.css' );
+            $params['pageRenderer']->addCssFile($backendCssPath . 'module_web_new_element.css' );
+            $params['pageRenderer']->addCssFile($backendCssPath . 'htmlarea.css' );
         }
     }
 }
