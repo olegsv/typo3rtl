@@ -11,35 +11,9 @@ namespace OLSSOFT\Typo3rtl\Hooks\Backend;
  *
  *  This copyright notice MUST APPEAR in all copies of the script!
  *
- *  This script is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ *  This script is free software distributed under terms of MIT license.
  *
- *  The GNU General Public License can be found at  http://www.gnu.org/copyleft/gpl.html . A copy of GPL is distributed along with Typo3: typo3_src/LICENSE.txt
  */
-
-/***************************************************************
- *
- *  The MIT License (MIT)
- *
- *  Permission is hereby granted, free of charge, to any person obtaining a copy
- *  of this software and associated documentation files (the "Software"), to deal
- *  in the Software without restriction, including without limitation the rights
- *  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- *  copies of the Software, and to permit persons to whom the Software is
- *  furnished to do so, subject to the following conditions:
- *
- *  The above copyright notice and this permission notice shall be included in
- *  all copies or substantial portions of the Software.
- *
- *  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- *  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- *  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- *  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- *  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- *  THE SOFTWARE.
- *
- ***************************************************************/
 
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
@@ -63,15 +37,74 @@ class PreHeaderRender {
      * @param array $params
      * @param \TYPO3\CMS\Backend\Template\DocumentTemplate $documentTemplate
      */
-    public function addStyles(&$params, &$documentTemplate){
+    public function addStyles(&$params, &$documentTemplate){ 
         
         if( isset( $GLOBALS['BE_USER'] ) && 
             $this->isRightToLeft( $GLOBALS['BE_USER']->user['lang'] ) ) {
             $backendCssPath = ExtensionManagementUtility::extRelPath('typo3rtl') . 'Resources/Public/Css/Backend/';
+
             $params['pageRenderer']->addCssFile($backendCssPath . 'rtl.css' );
             $params['pageRenderer']->addCssFile($backendCssPath . 'element_tceforms.css' );
             $params['pageRenderer']->addCssFile($backendCssPath . 'module_web_new_element.css' );
             $params['pageRenderer']->addCssFile($backendCssPath . 'htmlarea.css' );
+
+            error_log("added");
+        }
+    }
+
+    /**
+     *
+     * @param type $params
+     * @param \TYPO3\CMS\Core\Page\PageRenderer $documentTemplate
+     *
+     */
+    public function preStartPage(&$params, &$documentTemplate) {
+        error_log("typo3rtl: render-preProcess hook");
+        if( isset( $GLOBALS['BE_USER'] ) && $this->isRightToLeft( $GLOBALS['BE_USER']->uc['lang'] ) ) {
+
+            $resourcesPath = ExtensionManagementUtility::extRelPath('typo3rtl') . 'Resources/Public/';
+
+            $documentTemplate->addCssFile($resourcesPath . 'Css/Backend/rtl.css');
+            $documentTemplate->addCssFile($resourcesPath . 'Css/Backend/element_tceforms.css');
+            $documentTemplate->addCssFile($resourcesPath . 'Css/Backend/module_web_new_element.css');
+            $documentTemplate->addCssFile($resourcesPath . 'Css/Backend/htmlarea.css');
+            $documentTemplate->addCssFile($resourcesPath . 'Css/7.6/backend.css');
+
+            error_log("Added render-preProcess");
+        }
+    }
+
+
+    public function preStartPage2(&$params, &$documentTemplate) {
+        error_log("typo3rtl: render-postTransform");
+        if( isset( $GLOBALS['BE_USER'] ) && $this->isRightToLeft( $GLOBALS['BE_USER']->uc['lang'] ) ) {
+
+            $resourcesPath = ExtensionManagementUtility::extRelPath('typo3rtl') . 'Resources/Public/';
+
+            $backendCssPath = $resourcesPath . 'Css/Backend/';
+
+            $documentTemplate->addCssFile($backendCssPath . 'htmlarea2.css');
+
+            error_log("Added");
+        }
+    }
+
+
+    public function preStartPage3(&$params, &$documentTemplate) {
+        error_log("typo3rtl: render-postProcess");
+        if( isset( $GLOBALS['BE_USER'] ) && $this->isRightToLeft( $GLOBALS['BE_USER']->uc['lang'] ) ) {
+
+            $resourcesPath = ExtensionManagementUtility::extRelPath('typo3rtl') . 'Resources/Public/';
+
+            $backendCssPath = $resourcesPath . 'Css/Backend/';
+
+            $documentTemplate->addCssFile($backendCssPath . 'htmlarea3.css');
+
+            $extraPath = $resourcesPath . 'extjs_rtl/';
+            $documentTemplate->addCssFile($extraPath . 'css/extjs_rtl.css');
+            $documentTemplate->addJsFooterFile($extraPath . 'extjs_rtl.js');
+
+            error_log("Added");
         }
     }
 }
