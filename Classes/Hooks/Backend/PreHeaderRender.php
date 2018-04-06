@@ -69,6 +69,8 @@ class PreHeaderRender {
             $documentTemplate->addCssFile($resourcesPath . 'Css/Backend/module_web_new_element.css');
             $documentTemplate->addCssFile($resourcesPath . 'Css/Backend/htmlarea.css');
             $documentTemplate->addCssFile($resourcesPath . 'Css/7.6/backend.css');
+            $documentTemplate->addCssFile($resourcesPath . 'Css/bootstrap-rtl.min.css');
+
 
             error_log("Added render-preProcess");
         }
