@@ -14,19 +14,18 @@ $EM_CONF[$_EXTKEY] = array(
 	'category' => 'be',
 	'author' => 'Oleg Sverdlov',
 	'author_email' => 'oleg@ols.co.il',
-	'state' => 'alpha',
+	'state' => 'beta',
 	'internal' => '',
 	'uploadfolder' => '0',
 	'createDirs' => '',
 	'clearCacheOnLoad' => true,
-	'version' => '0.0.5',
+	'version' => '1.0.0',
 	'constraints' => array(
 		'depends' => array(
-			'typo3' => '6.2.0-7.6.99',
+			'typo3' => '7.6.0-7.6.99',
 		),
 		'conflicts' => array(
 		),
-		'suggests' => array(
-		),
+		'suggests' => array('static_info_tables'=>'*')
 	),
 );
