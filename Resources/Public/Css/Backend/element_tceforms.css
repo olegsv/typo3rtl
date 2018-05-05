@@ -240,3 +240,28 @@ img.t3-tceforms-sysfile-imagepreview {
 	margin-right: 10px;
 	margin-bottom: 10px;
 }
+
+
+.t3-tceforms-input-wrapper .tceforms-textfield, 
+.t3-tceforms-input-wrapper-hover .tceforms-textfield, 
+.t3-tceforms-input-wrapper .tceforms-datetimefield, 
+.t3-tceforms-input-wrapper-hover .tceforms-datetimefield, 
+.t3-tceforms-input-wrapper-datetime .tceforms-textfield, 
+.t3-tceforms-input-wrapper-datetime-hover .tceforms-textfield, 
+.t3-tceforms-input-wrapper-datetime .tceforms-datetimefield, 
+.t3-tceforms-input-wrapper-datetime-hover .tceforms-datetimefield {
+    padding-right: none;
+    padding-left: 30px !important;
+}
+
+.t3-tceforms-input-wrapper .t3-tceforms-input-clearer, .t3-tceforms-input-wrapper-hover .t3-tceforms-input-clearer {
+    right: auto;
+    left:10px;
+}
+
+editorWrap .resizable {
+    background-image: url(../../typo3/sysext/t3skin/rtehtmlarea/images/status/resizable.gif);
+    background-position: bottom left;
+    background-position-x: left;
+    background-position-y: bottom;
+}

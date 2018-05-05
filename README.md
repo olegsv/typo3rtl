@@ -25,7 +25,7 @@ For old Typo3 versions ( < 4.4 ) use zor_rtl extension.
 
 HTML WYSIWYG editor window is misaligned and scrollbar still at the right.
 
-No support for RTE configuration.
+No support for RTEHTMLAREA configuration.
 
 ## About
 

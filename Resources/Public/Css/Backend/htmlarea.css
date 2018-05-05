@@ -87,3 +87,6 @@ RTL override for htmlArea RTE editor
 .htmlarea-context-menu .hover {
 	margin: 0 0px 0 2px;
 }
+.htmlarea-content-body { direction: rtl; }
+
+.body { direction: rtl; }

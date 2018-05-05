@@ -44,9 +44,9 @@ namespace OLSSOFT\Typo3rtl\Hooks\Backend;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 /**
- * Hook class
+ * Hook class for left menu and work area, inactive
  */
-class PreHeaderRender {
+class RenderPreProcess {
     /**
      * Returns true if the language is right to left.
      * 
@@ -58,26 +58,20 @@ class PreHeaderRender {
         return ( $l==='he' || $l==='ar' || $l==='fa' || $l==='ur' );
     }
 
-    /**
-     * Add style
-     * @param array $params
-     * @param \TYPO3\CMS\Backend\Template\DocumentTemplate $documentTemplate
-     */
-    public function addStyles(&$params, &$documentTemplate){
+	/**
+	 * @param array $params
+	 * @param \TYPO3\CMS\Backend\Controller\BackendController $backendController
+	 */
+	public function addStyles(&$params, &$backendController) {
 
-
-        if( isset( $GLOBALS['BE_USER'] ) && 
+        if( isset( $GLOBALS['BE_USER'] ) &&
             $this->isRightToLeft( $GLOBALS['BE_USER']->uc['lang'] ) ) {
-                        
+
             $backendCssPath = ExtensionManagementUtility::extRelPath('typo3rtl') . 'Resources/Public/Css/Backend/';
-            $params['pageRenderer']->addCssFile($backendCssPath . 'rtl.css' );
-            $params['pageRenderer']->addCssFile($backendCssPath . 'element_tceforms.css' );
-            $params['pageRenderer']->addCssFile($backendCssPath . 'module_web_new_element.css' );
-            $params['pageRenderer']->addCssFile($backendCssPath . 'htmlarea.css' );
+            //$backendController->addCssFile('rte-new', $backendCssPath . 'rte-new.css' );
 
-            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:typo3rtl/Configuration/PageTS/RTE.ts">');
-
+            //\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:typo3rtl/Configuration/PageTS/RTE.ts">');
         }
     }
-
+    
 }
