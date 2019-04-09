@@ -1,0 +1,24 @@
+{
+    "type": "typo3-cms-extension",
+    "description": "RTL Backend for TYPO3",
+    "version": "1.1.0",
+    "replace": {
+        "typo3rtl": "self.version",
+        "typo3-ter/typo3rtl": "self.version"
+    },
+    "require": {
+        "typo3/cms-core": ">=7.6.0,<=8.7.999",
+        "php": ">=7.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "OLSSOFT\\Typo3rtl\\": "Classes"
+        }
+    },
+    "authors": [
+        {
+            "name": "Oleg Sverdlov",
+            "homepage": "https://github.com/olegsv/typo3rtl"
+        }
+    ]
+}
